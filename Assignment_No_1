@@ -1,0 +1,299 @@
+--------------Assignment 1---------------
+
+************Linux Commands***************
+
+1.man - Command to get help about commands
+      => It gives the information/help about the helping command of command 
+      
+ -> man ls
+
+2.uname - Print System information
+      =>It gives the information about the system OS
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ uname
+->Linux
+
+3.pwd - Print current directory
+	=> returns current working directory
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ pwd
+->/home/sunbeam/Desktop
+
+4.hostname - Print hostname of the machine
+	=>Prints the Name of host
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ hostname
+->sunbeam-HP-15-TS-Notebook-PC
+
+5.date - Find today’s date
+	=>returns todays day, date and time
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ date
+->Friday 31 May 2024 06:20:59 PM IST
+
+
+6.ncal - Print calendar for current month
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ ncal
+    May 2024          
+Su     5 12 19 26   
+Mo     6 13 20 27   
+Tu     7 14 21 28   
+We  1  8 15 22 29   
+Th  2  9 16 23 30   
+Fr  3 10 17 24 31   
+Sa  4 11 18 25 
+
+
+7.ls, dir - See directory structure
+	=>It lists the files and directories of current directory
+	
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ dir
+->CDAC  Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ ls
+->CDAC  Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+ 
+8.cat - Create file
+	=>Use to create new file with adding data 
+	=>cltr + D to stop writing in file
+	
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat >file.txt
+->Hey my name is nikhil 
+->i like you so much 
+->i think you also like me 
+->thats all 
+->lots of love from me 
+->////
+->cltr+D to exit writing
+
+
+9.cat >> - Append some text into existing file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat >> file.txt
+->One thing is missing 
+->that i have a gift for you 
+->tell me when ever you ready
+
+10.cp - Copy a file, Copy a directory
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cp file.txt /home/sunbeam/Desktop/Demo 
+
+11.mv - Move the files
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ mv file.txt /home/sunbeam/Desktop/Demo 
+
+12.mv - Rename a file
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ mv file.txt file1.txt
+
+13.tac, rev - Print the file in reverse order, Reverse each line in the file
+	a. tac will reverse the lines of the file
+	b. rev will print every line in reverse manner
+	
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ tac file.txt
+->tell me when ever you ready
+->that i have a gift for you
+->One thing is missing 
+->////
+->lots of love from me 
+->thats all 
+->i think you also like me 
+->i like you so much 
+->Hey my name is nikhil
+ 
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ rev file.txt
+ ->lihkin si eman ym yeH
+ ->hcum os uoy ekil i
+ ->em ekil osla uoy kniht i
+ ->lla staht
+ ->em morf evol fo stol
+ ->////
+ ->gnissim si gniht enO
+ ->uoy rof tfig a evah i taht
+ ->ydaer uoy reve nehw em llet
+
+	
+14.wc - Count the words, characters and lines in a file
+	=>it will count number of words and alphabets of the content in file.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ wc file.txt
+->9  41 184 file.txt
+
+15.mkdir - Create new directory
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ mkdir myname
+
+16.cd - Change current directory
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:/$ cd home
+
+17.rm - Remove a file, remove a directory ( with -R )
+	=>Remove/Delete file from directory
+	
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ rm file2.txt
+
+18.rmdir - remove empty directory
+	-> Delete empty directory only, if not empty then it will give error
+	-> If you want to download non-empty directory/folder then use -R rmdir
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ rmdir nik
+
+19.touch - change the modification time , Create Multiple empty files at once
+
+a.Create multiple files
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ touch nik.txt nik2.txt nik3.txt
+
+b.Change timestamp
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ touch nik.txt
+
+20.sort - Sort file.
+	=> It will sort the file as per first alphabet of Line.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ sort file.txt
+->////
+->Hey my name is nikhil 
+->i like you so much 
+->i think you also like me 
+->lots of love from me 
+->One thing is missing 
+->tell me when ever you ready
+->that i have a gift for you
+->thats all 
+
+21.uniq - Avoid repetition in a file.
+	=>Return only unique lines from the file.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ cat > file2.txt
+->hey hey hey
+->hey hey hey
+->nik nik
+->nik
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ uniq file2.txt
+->hey hey hey
+->nik nik
+->nik
+
+
+22.head - Print the specified number of lines from top in the file.
+	=>head -n file_name
+	   ->it will return top 2 lines of the file.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ head -2 file.txt
+->Hey my name is nikhil 
+->i like you so much 
+
+23.tail - Print the specified number of lines from bottom in the file.
+	=>tail -n file_name
+	   ->it will return last 2 lines of the file.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ tail -2 file.txt
+->that i have a gift for you
+->tell me when ever you ready
+
+24.factor - Find the factors of a number.
+
+-> sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ factor 254 
+-> 254: 2 127
+
+25.alias - Create command shortcut.
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ alias nik=clear
+
+26.unalias - remove the command shortcut.
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ unalias nik
+
+27.echo - Print environment variables individually.
+
+28.ps - Print current processes.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ ps
+    PID TTY          TIME CMD
+   5380 pts/0    00:00:00 bash
+  12722 pts/0    00:00:00 ps
+
+
+29.kill - Kill the process.
+
+30.env - Print environment variables.
+
+->
+sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ env
+SHELL=/bin/bash
+SESSION_MANAGER=local/sunbeam-HP-15-TS-Notebook-PC:@/tmp/.ICE-unix/1523,unix/sunbeam-HP-15-TS-Notebook-PC:/tmp/.ICE-unix/1523
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LANGUAGE=en_IN:en
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+PWD=/home/sunbeam/Desktop/Demo
+LOGNAME=sunbeam
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=wayland
+SYSTEMD_EXEC_PID=1550
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.O2VHO2
+HOME=/home/sunbeam
+USERNAME=sunbeam
+IM_CONFIG_PHASE=1
+LANG=en_IN
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+WAYLAND_DISPLAY=wayland-0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/4664a6cd_9ed5_4df5_af90_137eae01210a
+GNOME_SETUP_DISPLAY=:1
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=sunbeam
+GNOME_TERMINAL_SERVICE=:1.140
+DISPLAY=:0
+SHLVL=1
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+_=/usr/bin/env
+OLDPWD=/home/sunbeam/Desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
