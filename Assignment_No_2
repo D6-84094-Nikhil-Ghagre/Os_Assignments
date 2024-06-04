@@ -1,0 +1,304 @@
+--------------Assignment 2---------------
+
+************Linux Commands***************
+
+
+1. List the directory contents date wise sorted. ( man ls)
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ ls -t -l /home/sunbeam/Desktop/Demo/
+->total 4
+->-rw-rw-r-- 1 sunbeam sunbeam   0 May 31 19:11 nik.txt
+->-rw-rw-r-- 1 sunbeam sunbeam   0 May 31 19:10 nik2.txt
+->-rw-rw-r-- 1 sunbeam sunbeam   0 May 31 19:10 nik3.txt
+->-rw-rw-r-- 1 sunbeam sunbeam 184 May 31 18:39 file1.txt
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+2. List the directory contents size wise sorted.(man ls)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ ls -S -l -h
+->total 12K
+->drwxrwxr-x 4 sunbeam sunbeam 4.0K May 31 19:21  CDAC
+->drwxrwxr-x 2 sunbeam sunbeam 4.0K May 31 19:10  Demo
+->-rw-rw-r-- 1 sunbeam sunbeam  252 Jun  1 17:07 'Sunbeam Info'
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+3. List directory contents along with their inode no. (man ls)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ ls -i -l
+->total 12
+->4465482 drwxrwxr-x 4 sunbeam sunbeam 4096 May 31 19:21  CDAC
+->4470581 drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 19:10  Demo
+->4472073 -rw-rw-r-- 1 sunbeam sunbeam  252 Jun  1 17:07 'Sunbeam Info'
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+4. List the contents of the subdirectory.
+
+->
+sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ tree /home/sunbeam/Desktop/
+/home/sunbeam/Desktop/
+├── CDAC
+│   ├── Dotnet
+│   │   └── os
+│   │       ├── Assignments
+│   │       │   ├── 1_Linux_Command_assignment_I.pdf
+│   │       │   ├── 2_Linux_commands_assignment_II.pdf
+│   │       │   ├── 3_Linux_Commands_assignment_III.pdf
+│   │       │   ├── 4_Linux_Commands_assignment_IV.pdf
+│   │       │   └── 5_Linux_Shell_Script_Assignments.pdf
+│   │       ├── day01
+│   │       │   ├── classwork.txt
+│   │       │   ├── DAC-OS1.pdf
+│   │       │   ├── Day01_Notes.pdf
+│   │       │   ├── error.txt
+│   │       │   ├── err.txt
+│   │       │   ├── file1.txt
+│   │       │   ├── file2.txt
+│   │       │   ├── file3.txt
+│   │       │   ├── main.c
+│   │       │   ├── out.txt
+│   │       │   ├── Screenshot from 2024-05-31 09-19-29.png
+│   │       │   ├── Screenshot from 2024-05-31 09-27-02.png
+│   │       │   ├── Screenshot from 2024-05-31 10-54-13.png
+│   │       │   ├── Screenshot from 2024-05-31 11-10-06.png
+│   │       │   ├── Screenshot from 2024-05-31 11-16-43.png
+│   │       │   ├── Screenshot from 2024-05-31 11-22-25.png
+│   │       │   ├── Screenshot from 2024-05-31 11-25-50.png
+│   │       │   ├── Screenshot from 2024-05-31 12-09-36.png
+│   │       │   ├── Screenshot from 2024-05-31 12-22-04.png
+│   │       │   ├── Screenshot from 2024-05-31 12-23-31.png
+│   │       │   ├── Screenshot from 2024-05-31 12-24-43.png
+│   │       │   ├── Screenshot from 2024-05-31 13-18-52.png
+│   │       │   ├── Screenshot from 2024-05-31 13-29-02.png
+│   │       │   ├── Screenshot from 2024-05-31 13-30-07.png
+│   │       │   ├── Screenshot from 2024-05-31 14-40-48.png
+│   │       │   ├── Screenshot from 2024-05-31 14-49-27.png
+│   │       │   ├── Screenshot from 2024-05-31 14-51-08.png
+│   │       │   ├── Screenshot from 2024-05-31 14-53-18.png
+│   │       │   ├── Screenshot from 2024-05-31 14-57-54.png
+│   │       │   ├── Screenshot from 2024-05-31 15-11-50.png
+│   │       │   └── Screenshot from 2024-05-31 16-18-39.png
+│   │       ├── day02
+│   │       │   ├── big.txt
+│   │       │   ├── DAC-OS 02.pdf
+│   │       │   ├── Day02_Notes.pdf
+│   │       │   ├── demo01.sh
+│   │       │   ├── demo02.sh
+│   │       │   ├── demo03.sh
+│   │       │   ├── file1.txt
+│   │       │   ├── food.txt
+│   │       │   ├── num.txt
+│   │       │   ├── phones.txt
+│   │       │   ├── repeat.txt
+│   │       │   ├── Screenshot from 2024-06-01 11-56-28.png
+│   │       │   ├── Screenshot from 2024-06-01 11-57-36.png
+│   │       │   ├── Screenshot from 2024-06-01 11-58-08.png
+│   │       │   ├── Screenshot from 2024-06-01 12-35-30.png
+│   │       │   ├── Screenshot from 2024-06-01 14-37-45.png
+│   │       │   ├── Screenshot from 2024-06-01 14-44-13.png
+│   │       │   ├── Screenshot from 2024-06-01 14-45-43.png
+│   │       │   ├── Screenshot from 2024-06-01 14-51-27.png
+│   │       │   ├── Screenshot from 2024-06-01 14-54-00.png
+│   │       │   ├── Screenshot from 2024-06-01 14-55-11.png
+│   │       │   ├── Screenshot from 2024-06-01 14-58-25.png
+│   │       │   ├── Screenshot from 2024-06-01 15-07-21.png
+│   │       │   ├── Screenshot from 2024-06-01 15-20-14.png
+│   │       │   ├── Screenshot from 2024-06-01 15-22-45.png
+│   │       │   ├── Screenshot from 2024-06-01 15-24-33.png
+│   │       │   ├── Screenshot from 2024-06-01 15-26-26.png
+│   │       │   ├── Screenshot from 2024-06-01 15-27-19.png
+│   │       │   ├── Screenshot from 2024-06-01 15-32-34.png
+│   │       │   ├── Screenshot from 2024-06-01 15-37-40.png
+│   │       │   ├── Screenshot from 2024-06-01 16-01-39.png
+│   │       │   ├── Screenshot from 2024-06-01 16-18-02.png
+│   │       │   └── select.txt
+│   │       └── OS_Galvin_Slides.pdf
+│   └── Os_Assignments
+│       └── Os_Assignments
+│           └── Assignment_No_1
+├── Demo
+│   ├── file1.txt
+│   ├── nik2.txt
+│   ├── nik3.txt
+│   └── nik.txt
+└── Sunbeam Info
+
+9 directories, 76 files
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+5. Create a file, write your surname and name in it and save.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat > myName.txt
+->My Name is Nikhil
+->My Surname is Ghagresunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat myName.txt
+->My Name is Nikhil
+->My Surname is Ghagre
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+i. now open the same file and add your address in it and save.
+
+->My Surname is Ghagresunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat >> myName.txt
+->My Address is Nara
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat myName.txt
+->My Name is Nikhil
+->My Surname is GhagreMy Address is Nara
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ii. reopen the same file and check your name and address in it.
+
+->->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat myName.txt
+->My Name is Nikhil
+->My Surname is GhagreMy Address is Nara
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+6. how to change the time stamp of file (man touch)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ touch myName.txt
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ ls -l
+->total 16
+->drwxrwxr-x 4 sunbeam sunbeam 4096 May 31 19:21  CDAC
+->drwxrwxr-x 2 sunbeam sunbeam 4096 May 31 19:10  Demo
+->-rw-rw-r-- 1 sunbeam sunbeam   57 Jun  1 17:48  myName.txt
+->-rw-rw-r-- 1 sunbeam sunbeam  252 Jun  1 17:07 'Sunbeam Info'
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+7. Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one$ tree
+.
+├── 11.txt
+├── 12.txt
+├── 13.txt
+└── two
+    ├── 21.txt
+    ├── 22.txt
+    ├── 23.txt
+    └── three
+        ├── 31.txt
+        ├── 32.txt
+        ├── 33.txt
+        └── four
+            ├── 41.txt
+            ├── 42.txt
+            ├── 43.txt
+            └── five
+                ├── 51.txt
+                ├── 52.txt
+                └── 53.txt
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+8. Considering above directory structure , Do following operations :
+i. list the directory contents of directory named
+"five" from current directory (i.e. home directory).
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ ls -l /home/sunbeam/Desktop/one/two/three/four/five/
+total 0
+-rw-rw-r-- 1 sunbeam sunbeam 0 Jun  1 18:03 51.txt
+-rw-rw-r-- 1 sunbeam sunbeam 0 Jun  1 18:03 52.txt
+-rw-rw-r-- 1 sunbeam sunbeam 0 Jun  1 18:03 53.txt
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+ii. write your name in a file named "44.txt" of directory "four" from current directory.
+
+-> sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cd one/two/three/four
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four$ ls
+->41.txt  42.txt  43.txt  five
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four$ cat > 44.txt
+->my name is Nikhil
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four$ cat 44.txt
+->my name is Nikhil
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+iii. remove the file named "555.txt" from directory "five" from current directory.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four/five$ rm 555.txt
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+iv. change directory to five one/two/three/four/five/ ). ( i.e. cd)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cd one/two/three/four/five
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+v. write your course name in file named "3.txt" which resides in directory "three" from current directory (i.e. five).also read the same file.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four/five$ cd ..
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three/four$ cd ..
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three$ cat > 3.txt
+->my course is DAC
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+vi. list the contents of directory "two" from current directory (i.e. five).
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three$ ls /home/sunbeam/Desktop/one/two/three
+->31.txt  32.txt  33.txt  3.txt  four
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+vii. remove file named "222.txt" which belongs to directory "two" from current directory (i.e. five)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three$ rm /home/sunbeam/Desktop/one/two/21.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+viii. now change the directory to "one" 
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two/three$ cd /home/sunbeam/Desktop/one
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ix. remove all files only from directory named "five" from current directory (i.e. one)
+
+->
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+x. remove directory named "five" from current directory  (i.e. one)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one$ rm -f /home/sunbeam/Desktop/one/two.three/four/five
+
+---------------------------------------------------------------------------------------------------------------------------------------
+xi. remove whole directory named "four" from current directory (i.e. one)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one$ rm -f /home/sunbeam/Desktop/one/two.three/four
+
+---------------------------------------------------------------------------------------------------------------------------------------
+xii. change to your home directory.
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:/home$ 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+9. change the time stamp of file named "3.txt" which resides in directory named "three".(man touch)
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one$ touch /home/sunbeam/Desktop/one/two.three/3.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------

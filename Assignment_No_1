@@ -173,7 +173,7 @@ b.Change timestamp
 
 22.head - Print the specified number of lines from top in the file.
 	=>head -n file_name
-	   ->it will return top 2 lines of the file.
+	   ->it will return top n lines of the file.
 
 ->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ head -2 file.txt
 ->Hey my name is nikhil 
@@ -199,6 +199,8 @@ b.Change timestamp
 ->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ unalias nik
 
 27.echo - Print environment variables individually.
+->echo "Hey i love you"
+->Hey i love you
 
 28.ps - Print current processes.
 
@@ -209,10 +211,12 @@ b.Change timestamp
 
 
 29.kill - Kill the process.
+-sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ kill 5406
 
 30.env - Print environment variables.
 
 ->
+
 sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/Demo$ env
 SHELL=/bin/bash
 SESSION_MANAGER=local/sunbeam-HP-15-TS-Notebook-PC:@/tmp/.ICE-unix/1523,unix/sunbeam-HP-15-TS-Notebook-PC:/tmp/.ICE-unix/1523
