@@ -1,0 +1,188 @@
+--------------------Assignment 3----------------------
+
+-------------------Commands---------------------------
+1.ls - Display hidden files 
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ ls -a
+->.  ..  22.txt  23.txt  three
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2.rename - Rename all *.txt files to *.htm
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ rename 's/\.txt$/\.htm/' *.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+3.ln -s - Create symbolic link (shortcut) for a file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ ln -s niku
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+4.ln - Create hard link for a file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ ln 22.htm sai
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+5.stat - Display time stamp of the file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ stat sai
+  File: sai
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 803h/2051d	Inode: 4473005     Links: 2
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/ sunbeam)   Gid: ( 1000/ sunbeam)
+Access: 2024-06-01 18:01:38.778052971 +0530
+Modify: 2024-06-01 18:01:38.778052971 +0530
+Change: 2024-06-01 18:54:18.371129355 +0530
+ Birth: 2024-06-01 18:01:38.778052971 +0530
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+6.touch - Change the time stamp of the file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ touch sai
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+7.touch - Create empty file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ touch neeraj
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+8.tail - Print all lines in a file from fifth line onwards
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ tail -2 22.htm
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+9.init 0, poweroff - Shutdown (Only for super-user)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+10.init 6, reboot - Reboot (Only for super-user)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+12.whoami - Find current user
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ whoami
+->sunbeam
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+13.tty - Find current terminal
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop/one/two$ tty
+->/dev/pts/0
+
+----------------------------------------------------------------------------------------------------------------------------------------
+14.who am i - Find current user and terminal
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ whoami
+->sunbeam
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+15.users - Find all users logged into the system
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ users
+->sunbeam
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+16.who - Find all users logged in and terminals in use
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~$ who
+->sunbeam  tty2         2024-05-31 22:27 (tty2)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+17.grep, egrep, fgrep - Find a given word/pattern from the file
+
+->
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+18.chmod - Make a file as read-only
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ chmod g=r myName.txt
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+19.chmod - Make a file as write, read and execute
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ chmod g=rwx myName.txt
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+20.wc (using redirection) - Take input from the file, count words and store output to other file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ wc myName.txt > WordCount.txt 
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ cat WordCount.txt 
+-> 2 11 57 myName.txt 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+21.who | wc (using pipe) - Count words in output of “who” command
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ who | wc
+->      1       5      46
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+22.head, tail (using pipe) - Print lines 5 to 10 from the given file
+
+->sunbeam@sunbeam-HP-15-TS-Notebook-PC:~/Desktop$ head -10 PipeDemo.txt | tail -6
+5
+6
+7
+8
+9
+10
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+23.sort , uniq (using pipe) - Print the uniq values from the unsorted file
+
+->
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+24.who, grep (using pipe) - Display all users not using tty2, tty3, tty4
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+25.ls - Display all files in ascending order of their file size
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+26.ls, grep (using pipe) - Count number of files and directories from current directory
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+27.ls, grep (using pipe) - Display only hidden files in a directory
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+28.tr - Convert file contents into uppercase , also learn "-s" option of this command
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+29.cut - Split the file contents using delimiter and print required fields
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
